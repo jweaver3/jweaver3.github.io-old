@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Joseph Weavers Online Résumé</title>
+<style>
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Style each tab content individually */ 
+#Roelands {background-color:red;
+          opacity: 0.5;}
+#Elections-Ontario {background-color:yellow;
+			opacity: 0.5;}
+#Tokyo {background-color:navy;
+			opacity: 0.5;}
+#Oslo {background-color:black;
+			opacity: 0.5;}
+			
+body {
+  overflow: hidden;
+  background-image: url("IMG_0655.jpg");
+  background-size:100%;
+  background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    font-family: "Courier New", Monospace, serif;
+    text-align: center;
+    filter: drop-shadow(.05em .05em orange);
+    mix-blend-mode: difference
+}
+h2 {
+  text-align: center;
+  font-family: "Courier New", Monospace, serif;
+}
+
+h5 {
+    color: white;
+    text-align: center;
+    mix-blend-mode: difference
+}
+
+a {
+  color: white;
+  mix-blend-mode: difference;
+  }
+</style>
+</head>
+<body>
+<h1>Joseph Weavers Online Résumé</h1>
+
+<h2 style="background-color:rgb(95, 172, 249);">Profile: Hardworker Team player, Quick Learner, Enthusiastic, Responsible, Reliable</h2>
+
+<h2 style="background-color:rgb(95, 172, 249);">Experience:</h2>
+<div id="Roelands" class="tabcontent"><strong>
+  <h1>Roelands 2015-2018</h1>
+  <p>Experience with: Loading trucks, Operating machinery, Applying chemicals, Construction, General Labourer,
+competing ‘Bill of Lading’ and other applicable documentation, Led co-workers in special projects.</p></strong>
+</div>
+
+<div id="Elections-Ontario" class="tabcontent">
+<font color="purple"><strong>
+  <h1>Elections Ontario 2018</h1>
+  <p>Experience with: High stress environments, Important official paperwork. <br>Official title: Tabulator Deputy Returning Officer  </p></strong> </font>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h1>Tokyo</h1>
+  <p>Tokyo is the capitalof Japan.</p>
+</div>
+
+<div id="Oslo" class="tabcontent">
+  <h1>Oslo</h1>
+  <p>Oslo is the capital of Norway.</p>
+</div>
+
+<button class="tablink" onclick="workPlace('Roelands', this, 'teal')" id="defaultOpen">Roelands</button>
+<button class="tablink" onclick="workPlace('Elections-Ontario', this, 'purple')">Elections Ontario</button>
+<button class="tablink" onclick="workPlace('Tokyo', this, 'orange')">Tokyo</button>
+<button class="tablink" onclick="workPlace('Oslo', this, 'black')">Oslo</button>
+<br>
+<br>
+<h2 style="background-color:rgb(95, 172, 249);">Education: </h2>
+<pstyle="background-color:DodgerBlue;">
+<h2 style="background-color:rgb(95, 172, 249);">Portfolio: </h2>
+
+<h5>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+This work is licensed under a 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+</h5>
+<script>
+function workPlace(cityName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(cityName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+</html>
